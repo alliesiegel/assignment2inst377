@@ -46,12 +46,10 @@ li{
 }
 
 h2{
+  color: white;
   font-size: 4em;
   font-family: 'Oxanium', cursive;
   text-transform: capitalize;
-}
-p{
-  color: white;
 }
 .row input {
   border-radius: 3px;
