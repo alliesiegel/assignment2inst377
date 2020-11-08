@@ -50,7 +50,9 @@ h2{
   font-family: 'Oxanium', cursive;
   text-transform: capitalize;
 }
-
+p{
+  color: white;
+}
 .row input {
   border-radius: 3px;
   display: block;
