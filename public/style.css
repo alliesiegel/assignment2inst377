@@ -30,19 +30,18 @@ body {
 
 .results{
   align-items: center;
-  justify-content: stretch;
+  justify-content: space-evenly;
   display: block;
   font-weight: bold;
   font-size: 2em;
   text-transform: capitalize;
   font-family: 'Oxanium', cursive;
-  background: rgb(20, 17, 70);
   background: linear-gradient(90deg, rgb(20, 17, 70, 1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
   list-style-type: none;
 }
 
 .results li{
-  border: 10px solid black;
+  border: 2px solid black;
   margin-top: 2px;
   
 }
