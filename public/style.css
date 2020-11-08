@@ -1,6 +1,6 @@
 /*CSS*/
 body {
-  background: #eee;
+  background: rgb(219, 80, 38);
 }
 
 .wrapper {
@@ -10,6 +10,8 @@ body {
 
 .container {
   min-height: 100%;
+  justify-content: space-evenly;
+  align-content: space-between;
 }
 
 .header {
@@ -64,8 +66,16 @@ body {
   flex-direction: row;
 }
 
-.flex-inner input {
-  margin-right: 15px;
+.row input {
+  border-radius: 3px;
+  display: block;
+  margin: 0 auto;
+  align-self: center;
+  width: 50%;
+  padding: 8px 16px;
+  justify-content: space-evenly;
+  
+
 }
 
 .flex-inner {
@@ -82,19 +92,21 @@ body {
 /* New for Lab 7 */
 h1 {
   margin: 20px 50px;
-  padding: 0 20px;
+  padding: 5 25px;
   min-height: 75px;
-  background-color: rgb(95, 71, 233);
+  background-color: rgb(163, 148, 245);
   color: white;
   display: flex;
   
   align-items: center;
   justify-content: center;
   font-weight: bold;
-  font-size: 1.5em;
+  font-size: 4em;
   text-transform: capitalize;
   flex-wrap: nowrap;
   border-radius: 4px;
+  font-family: 'Oxanium', cursive;
+
 }
 
 #chartContainer {
@@ -105,4 +117,3 @@ h1 {
     width: 100%;
     margin-bottom: 15px;
 }
-
