@@ -30,7 +30,7 @@ body {
 
 .results{
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: start;
   display: block;
   font-weight: bold;
   font-size: 2em;
@@ -40,10 +40,15 @@ body {
   list-style-type: none;
 }
 
-.results li{
+li{
   border: 2px solid black;
   margin-top: 2px;
-  
+}
+
+h2{
+  font-size: 4em;
+  font-family: 'Oxanium', cursive;
+  text-transform: capitalize;
 }
 
 .row input {
