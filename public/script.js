@@ -22,10 +22,10 @@ function displayMatches() {
         </li>
         `;
     }).join('');
-    suggestions.innerHTML = html;
+    results.innerHTML = html;
 }
-const searchInput = document.querySelector('.search');
-const suggestions = document.querySelector('.suggestions');
+const searchInput = document.querySelector('input');
+const results = document.querySelector(".results");
 
 searchInput.addEventListener('change', displayMatches);
 searchInput.addEventListener('keyup', displayMatches);
