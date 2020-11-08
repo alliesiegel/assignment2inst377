@@ -1,7 +1,5 @@
 function filterByRestaurantName(){
     const filterText = document.getElementsByClassName('textinput');
-
-    
 }
 
 function filterByCategory(){
@@ -32,8 +30,10 @@ fetch (endpoint)
 .then(blob => blob.json())
 .then(data => stuff.push(...data))
 
-function findMatches(wordtoMatch, stuff)
-{ return stuff.filter(resta =>{
+function findMatches(wordtoMatch, stuff, jsonFro){ 
+  console.log('jsonFromServer', jsonFromServer);
+  sessionStorage.setItem('restaurantList', JSON.stringify(jsonFromServer));
+  return stuff.filter(resta =>{
     const regex = new RegExp(wordtoMatch, 'gi');
     return resta.category.match(regex) || resta.name.match(regex)
 });
