@@ -1,28 +1,3 @@
-function filterByRestaurantName(){
-    const filterText = document.getElementsByClassName('textinput');
-}
-
-function filterByCategory(){
-    const filterText = document.getElementsByClassName('textinput');
-}
-
-document.body.addEventListener('input', async (e) => {
-    e.preventDefault(); // this stops whatever the browser wanted to do itself.
-    const form = $(e.target).serializeArray();
-    fetch('/api', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(form)
-    })
-      .then((fromServer) => fromServer.json())
-      .then((jsonFromServer) => runThisWithResultsFromServer(jsonFromServer))
-      .catch((err) => {
-        console.log(err);
-      });
-  });
-
 const endpoint = "https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json";
 const stuff = [];
 
@@ -30,9 +5,7 @@ fetch (endpoint)
 .then(blob => blob.json())
 .then(data => stuff.push(...data))
 
-function findMatches(wordtoMatch, stuff, jsonFro){ 
-  console.log('jsonFromServer', jsonFromServer);
-  sessionStorage.setItem('restaurantList', JSON.stringify(jsonFromServer));
+function findMatches(wordtoMatch, stuff){ 
   return stuff.filter(resta =>{
     const regex = new RegExp(wordtoMatch, 'gi');
     return resta.category.match(regex) || resta.name.match(regex)
@@ -56,4 +29,3 @@ const suggestions = document.querySelector('.suggestions');
 
 searchInput.addEventListener('change', displayMatches);
 searchInput.addEventListener('keyup', displayMatches);
-
