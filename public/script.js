@@ -8,22 +8,6 @@ function filterByCategory(){
     const filterText = document.getElementsByClassName('textinput');
 }
 
-document.body.addEventListener('input', async (e) => {
-    e.preventDefault(); // this stops whatever the browser wanted to do itself.
-    const form = $(e.target).serializeArray();
-    fetch('/api', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(form)
-    })
-      .then((fromServer) => fromServer.json())
-      .then((jsonFromServer) => runThisWithResultsFromServer(jsonFromServer))
-      .catch((err) => {
-        console.log(err);
-      });
-  });
 
 const endpoint = "https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json";
 const stuff = [];
@@ -49,10 +33,10 @@ function displayMatches() {
         </li>
         `;
     }).join('');
-    suggestions.innerHTML = html;
+    results.innerHTML = html;
 }
-const searchInput = document.querySelector('.search');
-const suggestions = document.querySelector('.suggestions');
+const searchInput = document.querySelector('input');
+const results = document.querySelector(".results");
 
 searchInput.addEventListener('change', displayMatches);
 searchInput.addEventListener('keyup', displayMatches);
