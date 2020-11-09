@@ -44,8 +44,8 @@ li{
   border: 2px solid black;
   margin-top: 2px;
   justify-content: start;
-  margin-left: 2px;
-  margin-right: 2px;
+  margin-left: 10px;
+  margin-right: 10px;
   padding: 10px;
   flex-flow: row wrap;
 }
