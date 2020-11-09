@@ -20,7 +20,7 @@ function displayMatches() {
             <span class = "name">${resta.name}</span>
             <span class = "category">${resta.category}</span>
             <span class ="address">${resta.address_line_1}
-            <span class = "address">${resta.city}, + '' +${resta.state}, + ''+${resta.zip}</span>
+            <span class = "address">${resta.city}, ${resta.state}, ${resta.zip}</span>
         </li>
         `;
     }).join('');
