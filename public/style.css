@@ -50,7 +50,7 @@ li{
   margin-right: 0px;
   padding: 10px;
   flex-flow: row wrap;
-  white-space: normal;
+  white-space: pre-line;
 }
 .row input {
   border-radius: 3px;
